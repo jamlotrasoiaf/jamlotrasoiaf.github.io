@@ -1,4 +1,10 @@
 (function() {
+  function dynamicallyLoadScript(url) {
+    var script = document.createElement("script");  // create a script DOM node
+    script.src = url;  // set its src to the provided URL
+    document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+  }
+
   function showResults(results, store) {
     var searchResults = document.getElementById('search-results');
 
@@ -53,6 +59,7 @@
       }
     });
 
+    dynamicallyLoadScript(https://unpkg.com/lunr/lunr.js)
     var results = idx.search(searchTerm); // Perform search with Lunr.js
     showResults(results, window.store);
   }
