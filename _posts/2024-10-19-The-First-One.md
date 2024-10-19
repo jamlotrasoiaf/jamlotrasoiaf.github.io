@@ -1,7 +1,9 @@
 ---
 layout: post
 title: The First One
-author: Frodo, Olaf
+authors:
+- Frodo
+- Olaf
 excerpt: Everything begins from somewhere
 ---
 
